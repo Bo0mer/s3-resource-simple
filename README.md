@@ -11,13 +11,14 @@ resource_types:
 - name: <resource type name>
   type: docker-image
   source:
-    repository: 18fgsa/s3-resource-simple
+    repository: botush/s3-resource-simple
 resources:
 - name: <resource name>
   type: <resource type name>
   source:
     access_key_id: {{aws-access-key}}
     secret_access_key: {{aws-secret-key}}
+    endpoint: [<optional>, custom endpoint for using S3 compatible provider]
     bucket: {{aws-bucket}}
     path: [<optional>, use to sync to a specific path of the bucket instead of root of bucket]
     options: [<optional, see note below>]
